@@ -25,15 +25,15 @@
                             </div>
                         </div>
 
-                         <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
-                            <label for="username" class="col-md-4 control-label">Username</label>
+                         <div class="form-group{{ $errors->has('nim') ? ' has-error' : '' }}">
+                            <label for="nim" class="col-md-4 control-label">Nim / Nik</label>
 
                             <div class="col-md-6">
-                                <input id="username" type="username" class="form-control" name="username" value="{{ old('username') }}" required>
+                                <input id="nim" type="text" class="form-control" name="nim" value="{{ old('nim') }}" required>
 
-                                @if ($errors->has('username'))
+                                @if ($errors->has('nim'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('username') }}</strong>
+                                        <strong>{{ $errors->first('nim') }}</strong>
                                     </span>
                                 @endif
                             </div>
