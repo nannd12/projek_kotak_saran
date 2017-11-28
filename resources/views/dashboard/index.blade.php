@@ -25,10 +25,10 @@ Dashboard PNC
             <div class="inner">
               <h3>150</h3>
 
-              <p>Stok Barang</p>
+              <p>Mahasiswa</p>
             </div>
             <div class="icon">
-              <i class="ion ion-bag"></i>
+              <i class="fa fa-user"></i>
             </div>
             <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -55,10 +55,10 @@ Dashboard PNC
             <div class="inner">
               <h3>3</h3>
 
-              <p>Pegawai</p>
+              <p>Dosen</p>
             </div>
             <div class="icon">
-              <i class="ion ion-person-add"></i>
+              <i class="fa fa-group"></i>
             </div>
             <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
