@@ -4,6 +4,7 @@
     <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Kotak Saran - @yield('title')</title>
+  <title>PNC - @yield('title')</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -37,29 +38,23 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+
   </head>
   <body class="hold-transition skin-blue sidebar-mini">
-  <div class="wrapper">
-    @include('layouts.header')
-    @include('layouts.sidebar')
-      <div class="content-wrapper">
-      @yield('main')
-      @include('layouts.pengaturan')
-      </div>
-  </div>
-      
   
-
- 
-<script src="{{asset('template/bower_components/jquery/dist/jquery.min.js')}}"></script>
+  <script type="text/javascript" src="{{asset('js/jquery.min.js')}}"></script>
+  <script type="text/javascript" src="{{asset('js/validator.min.js  ')}}"></script>
 <!-- jQuery UI 1.11.4 -->
-<script src="{{asset('template/bower_components/jquery-ui/jquery-ui.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('template/bower_components/jquery-ui/jquery-ui.min.js')}}"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
   $.widget.bridge('uibutton', $.ui.button);
 </script>
 <!-- Bootstrap 3.3.7 -->
-<script src="{{asset('template/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('template/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('template/bower_components/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('template/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
 <!-- Morris.js charts -->
 <script src="{{asset('template/bower_components/raphael/raphael.min.js')}}"></script>
 <script src="{{asset('template/bower_components/morris.js/morris.min.js')}}"></script>
@@ -88,5 +83,14 @@
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('template/dist/js/demo.js')}}"></script>
 
+
+  <div class="wrapper">
+    @include('layouts.header')
+    @include('layouts.sidebar')
+      <div class="content-wrapper">
+      @yield('main')
+      @include('layouts.pengaturan')
+      </div>
+  </div>
 @yield('script')
   </body>

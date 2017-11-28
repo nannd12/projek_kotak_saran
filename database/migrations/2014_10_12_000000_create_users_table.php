@@ -19,6 +19,8 @@ class CreateUsersTable extends Migration
             $table->String('nim')->unique();
             $table->string('email');
             $table->string('password');
+            //untuk menambahkan default gambar
+            $table->string('avatar')->default('default.jpg');
             $table->rememberToken();
             $table->timestamps();
         });
