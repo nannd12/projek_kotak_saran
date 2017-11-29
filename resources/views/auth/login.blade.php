@@ -74,7 +74,7 @@
   </div>
   <!-- /.login-box-body -->
 </div>
-<!-- /.login-box -->
+<!-- /.login-box -->  
 
 <!-- jQuery 3 -->
 <script src="{{asset('template/bower_components/jquery/dist/jquery.min.js')}}"></script>
