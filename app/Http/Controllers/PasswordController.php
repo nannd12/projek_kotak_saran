@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use app\User;
-
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash; //untuk membuka password yang dikunci laravel
+use App\User;
 
 class PasswordController extends Controller
 {
@@ -20,14 +20,10 @@ class PasswordController extends Controller
     	{
     		# code...
     		//proses mengubah password
-    		$update->password = $request['new_pass'];
+    		$update->password = bcrypt($request['new_pass']);
     		$update->update();
 
     		return redirect('home')->with('alert', 'Ubah Password Berhasil');
-    	}
-    	else
-    	{
-    		return redirect('home')->with('error', 'Ubah Password Berhasil');
     	}
     }
 }
