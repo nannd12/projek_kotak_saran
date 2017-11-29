@@ -41,7 +41,7 @@
   <body class="hold-transition login-page">
    <div class="login-box">
   <div class="login-logo">
-    <a href="{{route('home')}}"><b>PNC</b>Kotak Saran</a>
+    <a href="{{route('home')}}"><b>PNC</b> Kotak Saran</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
@@ -69,8 +69,9 @@
         </div>
         <!-- /.col -->
       </div>
+
     </form>
-    <a href="#">I forgot my password</a><br>
+    <a href="{{route('register') }}">I forgot my password</a><br>
   </div>
   <!-- /.login-box-body -->
 </div>
