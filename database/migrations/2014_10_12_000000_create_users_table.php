@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             //untuk menambahkan default gambar
             $table->string('avatar')->default('default.jpg');
+            $table->enum('level',['admin','mahasiswa','dosen','direktur','wadir']);
             $table->rememberToken();
             $table->timestamps();
         });

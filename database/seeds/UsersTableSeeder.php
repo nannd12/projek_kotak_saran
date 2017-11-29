@@ -17,12 +17,14 @@ class UsersTableSeeder extends Seeder
         	'name' => 'Kevin Hendrawan Hartono',
         	'nim' => '150602031',
         	'email' => 'amedia92@gmail.com',
+            'level' => 'mahasiswa',
         	'password' => bcrypt('12345678'),
         	],
             [
             'name' => 'Ananda Dwi Prasetya',
             'nim' => '150602025',
             'email' => 'nandadp@gmail.com',
+            'level' => 'mahasiswa',
             'password' => bcrypt('12345678'),
             ],
             )
