@@ -41,33 +41,33 @@
             {{ csrf_field() }}
 
               <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }} has-feedback ">
-                <input type="text" class="form-control" placeholder="Name" value="{{ old('name') }}" required autofocus>
+                <input type="text" class="form-control col-md-4" placeholder="Name" value="{{ old('name') }}" required autofocus>
           
                   <span class="glyphicon glyphicon-user form-control-feedback"></span>
           
                   @if ($errors->has('name'))
-                    <span class="help-block">
+                    <span class="help-block col-md-8">
                       <strong>{{ $errors->first('name') }}</strong>
                     </span>
                   @endif
               </div>
       
               <div class="form-group{{ $errors->has('nim') ? ' has-error' : '' }} has-feedback ">
-                <input type="text" class="form-control" placeholder="NIM/NPAK" value="{{ old('nim') }}" required>
+                <input type="text" class="form-control col-md-4" placeholder="NIM/NPAK" value="{{ old('nim') }}" required>
           
                   <span class="glyphicon glyphicon glyphicon-pencil form-control-feedback"></span>
 
                   @if ($errors->has('nim'))
-                    <span class="help-block">
+                    <span class="help-block col-md-8">
                       <strong>{{ $errors->first('nim') }}</strong>
                     </span>
                   @endif
               </div>
   
               <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }} has-feedback">
-                <input type="email" class="form-control" placeholder="Email" value="{{ old('email') }}" required>
+                <input type="email" class="form-control col-md-4" placeholder="Email" value="{{ old('email') }}" required>
 
-                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                <span class="glyphicon glyphicon-envelope form-control-feedback col-md-8"></span>
 
                 @if ($errors->has('email'))
                   <span class="help-block">
