@@ -37,37 +37,38 @@
           <div class="register-box-body">
             <p class="login-box-msg">Register a new membership</p>
 
-            <form action="{{ route('register') }}" method="post">
-            {{ csrf_field() }}
+            <form method="POST" action="{{ route('register') }}">
+                {{ csrf_field() }}
+      
 
               <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }} has-feedback ">
-                <input type="text" class="form-control col-md-4" placeholder="Name" value="{{ old('name') }}" required autofocus>
+                <input name="name" type="text" class="form-control" placeholder="Name" value="{{ old('name') }}" required autofocus>
           
                   <span class="glyphicon glyphicon-user form-control-feedback"></span>
           
                   @if ($errors->has('name'))
-                    <span class="help-block col-md-8">
+                    <span class="help-block">
                       <strong>{{ $errors->first('name') }}</strong>
                     </span>
                   @endif
               </div>
       
               <div class="form-group{{ $errors->has('nim') ? ' has-error' : '' }} has-feedback ">
-                <input type="text" class="form-control col-md-4" placeholder="NIM/NPAK" value="{{ old('nim') }}" required>
+                <input name="nim" type="text" class="form-control" placeholder="NIM/NPAK" value="{{ old('nim') }}" required>
           
                   <span class="glyphicon glyphicon glyphicon-pencil form-control-feedback"></span>
 
                   @if ($errors->has('nim'))
-                    <span class="help-block col-md-8">
+                    <span class="help-block">
                       <strong>{{ $errors->first('nim') }}</strong>
                     </span>
                   @endif
               </div>
   
               <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }} has-feedback">
-                <input type="email" class="form-control col-md-4" placeholder="Email" value="{{ old('email') }}" required>
+                <input name="email" type="email" class="form-control" placeholder="Email" value="{{ old('email') }}" required>
 
-                <span class="glyphicon glyphicon-envelope form-control-feedback col-md-8"></span>
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
 
                 @if ($errors->has('email'))
                   <span class="help-block">
@@ -78,7 +79,7 @@
             
               <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }} has-feedback">
                 
-                <input type="password" class="form-control" placeholder="Password" required>
+                <input name="password" type="password" class="form-control" placeholder="Password" required>
                   <span class="glyphicon glyphicon-lock form-control-feedback"></span>
 
                   @if ($errors->has('password'))
@@ -90,10 +91,21 @@
 
               <div class="form-group has-feedback">
                 
-                <input type="password" class="form-control" placeholder="Retype password" required>
+                <input name="password_confirmation" type="password" class="form-control" placeholder="Retype password" required>
                   
                   <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
              </div>
+
+            <div class="form-group{{ $errors->has('level') ? ' has-error' : '' }} has-feedback">
+                <select name="level" class="form-control">
+                  <option>-- JABATAN --</option>
+                  <option value="admin">ADMIN</option>
+                  <option value="direktur">DIREKTUR</option>
+                  <option value="wardir">WARDIR</option>
+                  <option value="dosen">DOSEN</option>
+                  <option value="mahasiswa">MAHASISWA</option>
+                </select>
+            </div>
 
             <div class="row">
               <div class="col-xs-8">
@@ -112,6 +124,7 @@
             </div>
 
     </form>
+    
     <a href="{{ route('login') }}" class="text-center">I already have a membership</a>
   </div>
   <!-- /.form-box -->
