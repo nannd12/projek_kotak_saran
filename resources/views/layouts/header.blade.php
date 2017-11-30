@@ -4,11 +4,8 @@
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>PNC</b></span>
       <!-- logo for regular state and mobile devices -->
-<<<<<<< HEAD
       <span class="logo-lg"><b>PNC</b> KOTAK SARAN</span>
-=======
       <span class="logo-lg"><b>PNC</b>&nbsp;Kotak Saran</span>
->>>>>>> 72123951e383d1b54c48dfd56d012d44158ee6c2
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -237,7 +234,7 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="" class="btn btn-default btn-flat">Profile</a>
+                  <a href="{{route('profile.edit', Auth::user()->id)}}" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
                   <a href="{{ route('logout') }}" onclick="event.preventDefault();

@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
 
-class UsersController extends Controller
+class KotakController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -57,9 +56,7 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        //menampilkan tampilan ubah profile
-        $edit = User::find($id);
-        return view('auth.passwords.profile', compact('edit')); //membuat ini dlu
+        //
     }
 
     /**
