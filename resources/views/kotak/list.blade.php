@@ -12,7 +12,10 @@ Dashboard PNC
         <li class="active">Kritik dan Saran</li>
       </ol>
     </section>
+
+    @if(Auth::user()->level == 'admin')
     <section class="content">
+    
       <div class="row">
         <div class="col-md-12">
           <div class="box">
@@ -21,12 +24,12 @@ Dashboard PNC
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <table class="table table-bordered">
+              <table class="table table-hover">
                 <tr>
-                  <th style="width: 10px">#</th>
-                  <th>Task</th>
-                  <th>Progress</th>
-                  <th style="width: 40px">Label</th>
+                  <th>#</th>
+                  <th>Judul</th>
+                  <th>Jenis</th>
+                  <th>Status</th>
                 </tr>
               	</table>
             </div>
@@ -34,4 +37,6 @@ Dashboard PNC
           </div>
          </div>
         </section>
+        @endif
+
 @endsection

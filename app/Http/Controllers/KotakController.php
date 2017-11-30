@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Kotak;
 
 class KotakController extends Controller
 {
@@ -13,7 +14,8 @@ class KotakController extends Controller
      */
     public function index()
     {
-        //
+        //menampilkan data
+
     }
 
     /**
