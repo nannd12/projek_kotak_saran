@@ -12,6 +12,16 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function rules()
+    {
+        return [
+            'name' => 'required',
+            'nim' => 'required',
+            'email' => 'required',
+        ];
+    }
+    
     public function index()
     {
         //
@@ -71,7 +81,25 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       
+        $profile = User::find($id);
+
+        if ($request->hashFile('avatar')){
+            $avatar = $request->file('avatar');
+            $filename = time() . '.' . $avatar->getClientOriginalExtension();
+            $destinationPath = public_path('uploads/avatar');
+            $avatar-> move($destinationPath, $filename);
+
+            $profile->avatar = $filename;
+
+        }
+
+        //ubah proifil name,nim,email
+        $profile->name = $request['name'];
+        $profile->nim = $request['nim'];
+        $profile->email = $request['email'];
+        $profile->update();
+        return redirect()->back()->with('alert', 'Proses Ubah Sukses!');
     }
 
     /**
