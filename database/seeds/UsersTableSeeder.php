@@ -27,6 +27,13 @@ class UsersTableSeeder extends Seeder
             'level' => 'mahasiswa',
             'password' => bcrypt('12345678'),
             ],
+            [
+            'name' => 'XXX',
+            'nim' => 'admin',
+            'email' => 'admin@admin.com',
+            'level' => 'admin',
+            'password' => bcrypt('12345678'),
+            ],
             )
         );
     }

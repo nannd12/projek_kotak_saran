@@ -3,11 +3,20 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash; //untuk membuka password yang dikunci laravel
+use Illuminate\Support\Facades\Validator; //memberi validasi
 use App\User;
 
 class PasswordController extends Controller
 {
-    //
+    //membuat validator
+    protected function validator(array $request)
+    {
+        return Validator::make($request, [
+            
+            'password' => 'required|string|min:6',
+            'confirmed' => 'required|string|min:6|same:password',
+        ]);
+    }
     //fungsi mengganti password
     public function update(Request $request, $id)
     {
@@ -24,6 +33,10 @@ class PasswordController extends Controller
     		$update->update();
 
     		return redirect('home')->with('alert', 'Ubah Password Berhasil');
+    	}
+    	else
+    	{
+    		redirect()->back();
     	}
     }
 }

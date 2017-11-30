@@ -31,10 +31,16 @@
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
           </a>
         </li>
-        {{-- @if(Auth::level == 'admin') --}}
-        <li><a href=""><i class="fa fa-group"></i> <span>Dosen</span></a></li>
-        <li><a href=""><i class="fa fa-user"></i> <span>Mahasiswa</span></a></li>
-        <li><a href=""><i class="fa fa-laptop"></i> <span>Kritik & Saran</span></a></li>
+        @if(Auth::user()->level == 'admin')
+          <li><a href=""><i class="fa fa-group"></i> <span>Dosen</span></a></li>
+          <li><a href=""><i class="fa fa-user"></i> <span>Mahasiswa</span></a></li>
+          <li><a href=""><i class="fa fa-laptop"></i> <span>Kritik & Saran</span></a></li>
+        @elseif(Auth::user()->level == 'mahasiswa')
+          <li><a href=""><i class="fa fa-laptop"></i> <span>Kritik & Saran</span></a></li>
+        @elseif(Auth::user()->level == 'dosen')
+        @elseif(Auth::user()->level == 'wadir')
+        @elseif(Auth::user()->level == 'direktur')
+        @endif
       </ul>
         
     </section>
