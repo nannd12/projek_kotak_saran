@@ -43,10 +43,15 @@ Ubah Password
                     <input type="password" class="form-control" name="confirmed" id="confirmed" placeholder="Enter password">
                 </div>
 
+                <div class="form-group col-md-8">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
                   <!-- /.box-body -->
 
+
                   <div class="box-footer col-md-8">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    &copy;2017 Nanda & Kevin                    
                   </div>
               </div>
             </form>
